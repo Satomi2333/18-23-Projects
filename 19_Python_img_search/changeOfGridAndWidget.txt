@@ -1,0 +1,26 @@
+add:
+21	self.upWidget = QtWidgets.QWidget()
+22	self.upWidget.setObjectName("upWidget")
+23	self.leftWidget = QtWidgets.QWidget()
+24	self.leftWidget.setObjectName("leftWidget")
+25	self.rightWidget = QtWidgets.QWidget()
+26	self.rightWidget.setObjectName("rightWidget")
+
+178	self.upWidget.setLayout(self.gridLayout_2)
+351	self.leftWidget.setLayout(self.gridLayout_3)
+412 self.rightWidget.setLayout(self.gridLayout)
+
+change:
+179	self.gridLayout_main.addLayout(self.gridLayout_2, 1, 0, 1, 1)
+	self.gridLayout_main.addWidget(self.upWidget, 1, 0, 1, 1)
+352	self.gridLayout_main.addLayout(self.gridLayout_3, 1, 1, 1, 1)
+	self.gridLayout_main.addWidget(self.leftWidget, 1, 1, 1, 1)
+413	self.gridLayout_main.addLayout(self.gridLayout, 0, 0, 1, 2)
+	self.gridLayout_main.addWidget(self.rightWidget, 0, 0, 1, 2)
+
+self.leftWidget.setLayout(self.gridLayout_2)
+self.rightWidget.setLayout(self.gridLayout_3)
+self.upWidget.setLayout(self.gridLayout)
+self.gridLayout_main.addWidget(self.rightWidget, 1, 1, 1, 1)
+self.gridLayout_main.addWidget(self.upWidget, 0, 0, 1, 2)
+self.gridLayout_main.addWidget(self.leftWidget, 1, 0, 1, 1)

@@ -1,0 +1,198 @@
+QWidget {
+   background-color: rgb(156,202,252);
+}
+available
+QWidget#centralWidget {
+   border-radius: 5;
+}
+QWidget#rightWidget {
+   background-color: rgb(222,237,254);
+}
+
+QToolBar {
+    background-color: rgb(156,202,252);
+}
+
+QDialog, QFileDialog {
+    background-color: rgb(156,202,252);
+}
+
+QTabWidget::pane { /* The tab widget frame */
+    border-top: 2px solid rgb(214,233,254);
+}
+
+QTabWidget::tab-bar {
+    left: 5px; /* move to the right by 5px */
+}
+
+QTabBar, QTabWidget {
+    background-color: rgb(156,202,252);
+}
+QTabBar::tab {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #FFFFFF, stop: 0.4 #DDDDDD,
+                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+     border: 1px solid darkkhaki;
+     border-bottom-color: #C2C7CB; /* same as the pane color */
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     min-width: 8ex;
+     padding: 2px;
+ }
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+}
+
+/* Nice Windows-XP-style password character. */
+QLineEdit[echoMode="2"] {
+    lineedit-password-character: 9679;
+}
+
+QHeaderView::section {
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #616161, stop: 0.5 #505050,
+                                       stop: 0.6 #434343, stop:1 #656565);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #6c6c6c;
+ }
+
+ QHeaderView::section:checked
+ {
+     background-color: red;
+ }
+
+
+/* We provide a min-width and min-height for push buttons
+   so that they look elegant regardless of the width of the text. */
+QPushButton {
+    background-color: rgb(214,233,254);
+    border-width: 2px;
+    border-color: rgb(222,237,254);
+    border-style: solid;
+    border-radius: 5;
+    padding: 3px;
+    min-width: 9ex;
+    min-height: 2.5ex;
+}
+
+QPushButton:hover {
+   background-color: rgb(90,166,250);
+   border-color: rgb(132,188,251);
+}
+
+QPushButton{
+border-image: url(:./icon/water.png);
+}
+QPushButton:hover{
+border-image: url(:./icon/water.png) -10 -10 -10 -10;
+}
+
+/* Increase the padding, so the text is shifted when the button is
+   pressed. */
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgb(61,151,250);
+}
+
+QLabel, QAbstractButton {
+    font: bold;
+}
+
+/* Mark mandatory fields with a brownish color. */
+.mandatory {
+    color: blue;
+}
+
+/* Bold text on status bar looks awful. */
+QStatusBar QLabel {
+   font: normal;
+}
+
+QStatusBar::item {
+    border-width: 1;
+    border-color: rgb(222,237,254);
+    border-style: solid;
+    border-radius: 2;
+}
+
+QStackedWidget, QComboBox, QLineEdit, QSpinBox, QTextEdit, QListView, QWebView, QTreeView, QHeaderView, QDateEdit, QDateTimeEdit{
+    background-color: rgb(214,233,254);
+    selection-color: rgb(222,237,254); 
+    selection-background-color: rgb(90,166,250);
+}
+
+QListView {
+    show-decoration-selected: 1;
+}
+
+QListView::item:hover {
+    background-color: rgb(90,166,250);
+}
+
+/* We reserve 1 pixel space in padding. When we get the focus,
+   we kill the padding and enlarge the border. This makes the items
+   glow. */
+QLineEdit, QFrame {
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: rgb(222,237,254);
+    border-radius: 5px;
+}
+
+/* As mentioned above, eliminate the padding and increase the border. */
+QLineEdit:focus, QFrame:focus {
+    border-width: 3px;
+    padding: 0px;
+}
+
+/* A QLabel is a QFrame  */
+QLabel {
+    border: none;
+    padding: 0;
+    background: none;
+    color: rgb(222,237,254);
+}
+
+/* A QToolTip is a QLabel  */
+QToolTip {
+	background-color: rgb(222,237,254);
+    border: 2px rgb(222,237,254);
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;
+}
+
+/* Nice to have the background color change when hovered. */
+QRadioButton:hover, QCheckBox:hover {
+    background-color: rgb(214,233,254);
+    border-radius: 3px;
+}
+
+/* Force the dialog's buttons to follow the Windows guidelines. */
+QDialogButtonBox {
+    button-layout: 0;
+}
+
+
+/* rgb(214,233,254) rgb(222,237,254)   nomal border */
+/* rgb(90,166,250) rgb(132,188,251)    hover */
+/* rgb(61,151,250) pressed */
+/*
+qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 rgb(224,238,254), stop: 0.4 rgb(214,233,254),
+                                 stop: 0.5 rgb(214,233,254), stop: 1.0 rgb(205,228,254);
+*/

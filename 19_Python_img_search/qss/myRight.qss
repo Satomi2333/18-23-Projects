@@ -1,0 +1,81 @@
+QWidget {
+   background-color: rgb(222,237,254);
+   border-width: 2px;
+   border-color: rgb(156,202,252);
+   border-style: solid;
+   border-radius: 7;
+}
+
+QLabel, QAbstractButton {
+    font: bold;
+}
+
+QAbstractSpinBox,QComboBox,QPushButton,QTextEdit{
+	color: rgb(5,97,199);
+}
+QComboBox::down-arrow,QAbstractSpinBox::down-arrow{
+	border-width: 2px;
+    border-color: rgb(156,202,252);
+    border-style: solid;
+    border-radius: 5;
+}
+
+QComboBox::drop-down,QAbstractSpinBox::drop-down {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QLabel {
+	border: none;
+    padding: 0;
+    background: none;
+    color: rgb(156,202,252);
+}
+
+QToolTip {
+	background-color: rgb(156,202,252);
+    border: 2px rgb(222,237,254);
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;
+}
+
+QPushButton {
+    background-color: rgb(156,202,252);
+    border-width: 2px;
+    border-color: rgb(222,237,254);
+    border-style: solid;
+    border-radius: 5;
+	min-height: 5ex;
+}
+
+
+QPushButton#pushButton_show0,QPushButton#pushButton_show1,QPushButton#pushButton_show2,QPushButton#pushButton_show3,QPushButton#pushButton_show4 {
+    background-color: rgb(222,237,254);
+	border-width: 1px;
+    border-color: rgb(222,237,254);
+    border-style: solid;
+    border-radius: 5;
+}
+
+QPushButton:hover {
+   background-color: rgb(90,166,250);
+   border-color: rgb(132,188,251);
+}
+
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgb(61,151,250);
+}
+
+QPushButton:!enabled {
+    background-color: rgb(90,166,250);
+    border-color: rgb(132,188,251);
+}
+
+QLineEdit {
+     padding: 0 0;
+     color : rgb(4,74,151);
+     selection-background-color: rgb(222,237,254);
+}

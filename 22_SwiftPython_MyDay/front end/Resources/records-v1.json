@@ -1,0 +1,13 @@
+[
+	{
+		"id":"theOneRecord",
+		"belongsTodo":"theOneTodo",
+		"belongsTodoSub":"theOneTodoSub",
+		"recordTime":"2022-03-10T10:54:00+0800",
+		"startTime":"2022-03-10T10:54:00+0800",
+		"endTime":"2022-03-10T15:00:00+0800",
+		"value":14,
+        "source":"iPhone",
+        "note":"this is a test record",
+	}
+]

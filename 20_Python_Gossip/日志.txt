@@ -1,0 +1,100 @@
+v0.0.1
+	2020-5-25
+		实现：
+			算法：每次启动脚本的时候都会生成一个独一无二的generation，用来模拟每次节点所在计算机启动后会获得的“代号”
+			类：节点类，包含了初始化、输出自己的节点视图、更新自己的视图，以及三个请求与别的节点进行更新的方法
+			       节点的详细信息类，包含初始化、简单属性的获取以及字符串的转换
+			初阶成果：
+				Node 10.0.0.1
+				EndPointState 10.0.0.1
+				HeartBeatState:generation 22,version 0
+				ApplicationState ''
+
+				Node 10.0.0.2
+				EndPointState 10.0.0.2
+				HeartBeatState:generation 22,version 0
+				ApplicationState ''
+
+				node:10.0.0.1 sent a message: to 10.0.0.2 to try to syn the states
+				node:10.0.0.2 received a message from 10.0.0.1, updated self.s states and send another message back
+				node:10.0.0.1 received a message from ?, which have been updated
+				Node 10.0.0.1
+				EndPointState 10.0.0.1
+				HeartBeatState:generation 22,version 0
+				ApplicationState ''
+				EndPointState 10.0.0.2
+				HeartBeatState:generation 22,version 0
+				ApplicationState ''
+
+				Node 10.0.0.2
+				EndPointState 10.0.0.2
+				HeartBeatState:generation 22,version 0
+				ApplicationState ''
+				EndPointState 10.0.0.1
+				HeartBeatState:generation 22,version 0
+				ApplicationState ''
+			
+		待实现：
+			方法：根据收到的视图来更新自己的视图，包括 1.新增节点时(√) 2.节点比自己新时 3.节点比自己旧时
+v0.1.0
+	2020-5-26
+	2020-5-27
+		实现：
+			方法：根据收到的视图来更新自己的视图，包括 1.新增节点时(√) 2.节点比自己新时(√) 3.节点比自己旧时(√)
+			          更新自己的状态，支持 [代，版本，负载信息，普通信息]
+			函数：生成（唯一）随机字符串
+			逻辑：已经有生成动画的逻辑了，之后就可以用可视化的方式来呈现此算法了（代码还存在Jupyter中调试，对应animation v0.0.1.py）
+		修改：
+			函数：现在生成generation已经是个函数了，可以被其他节点调用，生成新的generation
+		新增：
+			类：（节点的详细信息类）更新version的方法，application属性的初始化，更新状态的方法
+			      （节点类）请求同步前先增加自己的version号，更新状态的方法
+v0.1.1
+	2020-5-28
+		新增：
+			类：（节点类）生成自己视图的简要
+			      （节点的详细信息类）生成短结果字符串
+		修改：
+			类：（节点类）在图上显示时的XY坐标，以及自己当前正在做的事
+			      （节点的详细信息类）在更新自己的属性时会反向更新父类正在做的事
+		发现：
+			？：在spyder中渲染gif很容易导致内存溢出，在Jupyter中不仅可以（掉帧）显示，而且还不容易崩溃
+			？？：240幅图像，30fps需要7s？？？200幅30fps需要5s多一点？？？
+		待实现：
+			动画：已知所需的iter：
+				同步消息内容(text) synMessage ：来自 Node.shortKnownEndPointStates()
+				同步消息移动轨迹(x,y) xSynMessage, ySynMessage : 来自多个np.linspace(start,end,count)
+				节点正在做什么(text) nodesDoingWhat: 'node {name1}: {doingWhat}\n node2....'.format(Node.doingWhat()...)
+				节点的视图(text)node1KnownEndPointStates... : 来自 Node.printKnownEndPointStates()
+v0.2.0
+	2020-5-29
+		新增：
+			类：（节点类）一个保存已知节点的列表、一个记录自己在列表中位置的属性、一个获取随机其他节点的方法、一个设置随机XY坐标的方法、同步方法现在可被断开，手动依次触发、生成动画所需的iter
+		发现：
+			？：在spyder中向随机节点发送同步，可以完成双向同步，而在Jupyter中不能使用随机节点函数，只能指定对象才能双向同步，否则只能单向。神奇的是每次执行前重启Jupyter内核之后就没有问题了（大概跟Node.nodes有关）
+		实现：
+			动画：第90代节点时，成功生成了动画，目前可以显示各个节点，节点同步时模拟消息发送的动画，左上角显示节点状态，generation 91.gif（对应animation v0.1.0.py）
+v0.2.1
+	2020-5-30
+		实现：
+			动画：爆肝到深夜终于实现了节点的视图的更新显示，删去了冗余代码和测试文字框，generation 100.gif
+			          可以生成多个动画，并拼接成一个
+			          不仅可以生成同步演示动画，还支持生成 随机更新节点状态 动画
+			          现在可以进行多次（可指定）拼接，每次有30%概率（可修改）生成 节点更新 70%概率生成 同步演示 对应animation v0.2.0.py
+			类：（节点类）随机更新一个状态
+		修改：
+			类：（节点类）因为怀疑自己的英语水平，所以汉化了一些输出内容。在更新状态时会返回一个newer，用于指出更新的内容，而newer可以用于获取短状态时夹杂长状态，这可用于动画演示并让其看起来更符合真实情况
+			动画：修复了节点2和4因为太靠右而显示不全的问题（此问题也存在于130.gif中）
+		发现：
+			？：渲染11组动画需要提交内存32GB，先确保有足够的虚拟内存，否则连报错（quantization error、memory error）都来不及就挂了，本次测试生成结果是generation 130.gif
+v0.2.2
+	2020-5-31
+		修改：
+			类：（节点类）在更新状态时会返回一个newer，修改了生成newer的条件。每次修改视图之后都要进行排序，这样在输出的时候更美观
+			      （节点状态类）修改了初始化方法，现在可以从传入已知节点来创建一个新的节点
+			逻辑：在修改已知视图时，不再是增修节点状态类的引用，而是生成一个新的实例
+			动画：生成的每个节点拥有随机的样式和大小
+		发现：
+			？：到现在才意识到一个问题，每个节点的视图里面保存的是已知节点状态“的引用！”，所以出现了不用同步也能保持最新状态的问题
+		实现：
+			函数：一个字典排序函数

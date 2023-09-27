@@ -1,0 +1,49 @@
+QWidget {
+   background-color: rgb(156,202,252);
+   border-width: 2px;
+   border-color: rgb(222,237,254);
+   border-style: solid;
+   border-radius: 7;
+}
+
+QLabel, QAbstractButton {
+    font: bold 12px;
+}
+
+QLabel {
+	border: none;
+    padding: 0;
+    background: none;
+    color: rgb(222,237,254);
+}
+
+QPushButton#pushButton_icon {
+    background: none;
+	border: none;
+}
+
+QPushButton {
+    background-color: rgb(214,233,254);
+    border-width: 2px;
+    border-color: rgb(222,237,254);
+    border-style: solid;
+    border-radius: 5;
+	min-width: 5ex;
+    min-height: 7ex;
+}
+
+QPushButton:hover {
+   background-color: rgb(90,166,250);
+   border-color: rgb(132,188,251);
+}
+
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgb(61,151,250);
+}
+
+QPushButton:!enabled {
+    background-color: rgb(90,166,250);
+    border-color: rgb(132,188,251);
+}

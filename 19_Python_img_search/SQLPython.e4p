@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric project file for project SQLPython -->
+<!-- Saved: 2019-12-13, 23:21:12 -->
+<!-- Copyright (C) 2019 xrl,  -->
+<Project version="5.1">
+  <Language></Language>
+  <Hash>ecae805263455e167fab52de1e607c100b23f19d</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>PyQt5</ProjectType>
+  <Description>用pysql连接sql数据库，对图片的索引信息进行管理</Description>
+  <Version>0.1</Version>
+  <Author>xrl</Author>
+  <Email></Email>
+  <Eol index="0"/>
+  <Sources>
+    <Source>UI_Main.py</Source>
+    <Source>Ui_UI_Main.py</Source>
+    <Source>Ui_showPhoto.py</Source>
+    <Source>qss/1.qss</Source>
+    <Source>qss/2.qss</Source>
+    <Source>qss/3.qss</Source>
+    <Source>qss/4.qss</Source>
+    <Source>qss/my.qss</Source>
+    <Source>test.qrc</Source>
+  </Sources>
+  <Forms>
+    <Form>UI_Main.ui</Form>
+    <Form>showPhoto.ui</Form>
+  </Forms>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.e4p" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.md" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.proto" type="PROTOCOLS"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.rst" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.txt" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="GNUmakefile" type="OTHERS"/>
+    <FiletypeAssociation pattern="Makefile" type="OTHERS"/>
+    <FiletypeAssociation pattern="README" type="OTHERS"/>
+    <FiletypeAssociation pattern="README.*" type="OTHERS"/>
+    <FiletypeAssociation pattern="makefile" type="OTHERS"/>
+  </FiletypeAssociations>
+</Project>

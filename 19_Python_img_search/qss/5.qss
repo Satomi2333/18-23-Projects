@@ -1,0 +1,237 @@
+QSpinBox,QComboBox{  
+border:1px solid #242424; 
+border-radius:3px;
+padding:2px;
+background:#484848; 
+/*selection-background-color:#484848;
+selection-color:#DCDCDC;*/
+color : white;
+}
+
+ 
+QComboBox::down-arrow{
+image:url(:/psblack/add_bottom.png); 
+width:10px;
+height:10px;
+right:2px;
+}
+QComboBox::drop-down:on{
+top:1px;
+}
+QComboBox::drop-down{
+subcontrol-origin:padding; 
+subcontrol-position:top right; 
+width:15px;
+border-left-width:0px;
+border-left-style:solid;
+border-top-right-radius:3px;
+border-bottom-right-radius:3px;
+border-left-color:#242424;
+}
+
+ 
+QComboBox:hover{ 
+    background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 gray,stop:1 #525252);
+}
+
+ 
+
+ 
+QComboBox QAbstractItemView { 
+
+ 
+/*      border: 2px solid darkgray;*/
+    selection-color: white; 
+    selection-background-color: #484848;
+      color : black;
+      border: 0px; 
+       outline:0px; 
+  }
+
+ 
+
+ 
+QRadioButton{ 
+    color : white;
+}
+
+ 
+QRadioButton::indicator::unchecked{ 
+image:url(:/psblack/radiobutton_unchecked.png);
+}
+
+ 
+QRadioButton::indicator::unchecked:disabled{
+image:url(:/psblack/radiobutton_unchecked_disable.png);
+}
+
+ 
+QRadioButton::indicator::checked{ 
+image:url(:/psblack/radiobutton_checked.png);
+}
+
+ 
+QRadioButton::indicator::checked:disabled{
+image:url(:/psblack/radiobutton_checked_disable.png);
+}
+
+ 
+
+ 
+QTabWidget::pane{ 
+    background-color:#484848;
+}
+/* shuxing wei tab=true de suoyou widget baohan ta de zilei keyi
+ba tabwidget nong quan hei le */
+QWidget[tab="true"],.QWidget,QTabWidget{
+background:#484848;
+}
+.QWidget{
+border-bottom:1px solid #242424;
+}
+
+ 
+
+ 
+QTabBar::tab{ 
+border:1px solid #242424;
+color:#DCDCDC;
+margin:0px;
+min-height: 12;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+
+ 
+/*tabBar bei xuanzhong he shubiao huaguo*/
+QTabBar::tab:selected,QTabBar::tab:hover{
+border-style:solid;
+border-color: white;
+background:#444444;
+}
+/* shangfang de tabBar  hai you zuo you xia fang de bar */
+
+QTabBar::tab:top,QTabBar::tab:bottom{
+padding:3px 8px 3px 8px;
+}
+
+ 
+/*QTabBar::tab:left,QTabBar::tab:right{
+padding:8px 3px 8px 3px;
+} */
+QTabBar::tab:top:selected,QTabBar::tab:top:hover{
+border-width:0px 0px 2px 0px;
+border-left-width:1px;
+border-left-color:#242424;
+border-right-width:1px;
+border-right-color:#242424;
+}
+
+ 
+
+ 
+.QLabel:disabled{
+    color : gray;
+}
+QCheckBox,QLabel{
+    color : white;
+}
+
+ 
+QCheckBox:disabled{
+    color : gray;
+}
+QCheckBox::indicator:unchecked{
+image:url(:/psblack/checkbox_unchecked.png);
+}
+
+ 
+QCheckBox::indicator:unchecked:disabled{
+image:url(:/psblack/checkbox_unchecked_disable.png);
+}
+
+ 
+QCheckBox::indicator:checked{
+image:url(:/psblack/checkbox_checked.png);
+}
+
+ 
+QCheckBox::indicator:checked:disabled{
+image:url(:/psblack/checkbox_checked_disable.png);
+}
+
+ 
+QCheckBox::indicator:indeterminate{
+image:url(:/psblack/checkbox_parcial.png);
+}
+
+ 
+QCheckBox::indicator:indeterminate:disabled{
+image:url(:/psblack/checkbox_parcial_disable.png);
+}
+.QGroupBox{ 
+border:1px solid darkgray;
+border-radius:4px;
+margin-top:8px;
+padding: 6px 0;
+}
+
+ 
+.QGroupBox::title{
+subcontrol-origin:margin;
+position:relative;
+left:10px;
+color : white;
+}
+QLineEdit {
+     border: 1px solid gray;
+     border-radius: 4px;
+     padding: 0 0;
+     background: gray;
+     color : white;
+     selection-background-color: rgb(4,113,206,220);
+}
+
+ 
+/*.QPushButton{
+    background:rgb(4,113,206,220);
+    border-radius:4px;
+    border:1px solid darkgray;
+    min-width:60;
+    min-height:18;
+    color : white;
+}*/
+.QPushButton{
+border-style:none;
+border:1px solid #242424;
+color:#DCDCDC;
+padding:5px;
+min-height:15;
+min-width : 60;
+border-radius:5px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+QPushButton#pushButton_SettingClose{
+    image:url(:/16-9/Exit.png);
+    border : 0px ;
+    padding:5px 0;
+    min-width : 30;
+    background: #484848;
+}
+QPushButton#pushButton_SettingClose:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+/*.QPushButton:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgb(4,113,206,220),stop:1 rgb(4,113,206,100));
+}*/
+
+ 
+.QPushButton:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+
+ 
+.QPushButton:pressed{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+.QPushButton:disabled{
+    background:darkgray;
